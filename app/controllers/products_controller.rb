@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to cocktail_path(@product)
+      redirect_to product_path(@product)
     else render :new
     end
   end
