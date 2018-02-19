@@ -7,5 +7,4 @@ class Product < ApplicationRecord
   validates :category, presence: true, inclusion: { in: CATEGORY }
   validates :description, presence: true
   validates :price, presence: true
-  validates :rent, default: :false
 end
