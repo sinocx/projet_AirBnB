@@ -1,2 +1,12 @@
 <h1>Products#new</h1>
 <p>Find me in app/views/products/new.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1>Nouveau produit</h1>
+      <%= render 'form' %>
+      <%= link_to 'Retour', products_path %>
+    </div>
+  </div>
+</div>
