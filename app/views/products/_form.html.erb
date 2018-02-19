@@ -1,0 +1,9 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.input :title, placeholder: "Votre product" %>
+  <%= f.input :category, Product::CATEGORY, prompt: "Choisissez une catégorie" %>
+  <%= f.input :description, placeholder: "Description de votre produit" %>
+  <%= f.input :price, placeholder: "Prix" %>
+
+
+  <%= f.button :submit, class: "btn btn-primary"  %>
+<% end %>
