@@ -5,5 +5,4 @@ class Product < ApplicationRecord
   validates :category, presence: true
   validates :description, presence: true
   validates :price, presence: true
-  validates :rent, default: :false
 end
