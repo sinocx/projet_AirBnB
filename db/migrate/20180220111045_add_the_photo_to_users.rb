@@ -4,3 +4,4 @@ class AddThePhotoToUsers < ActiveRecord::Migration[5.1]
     add_column :products, :photo, :string
   end
 end
+
