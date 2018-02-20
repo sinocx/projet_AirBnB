@@ -1,12 +1,35 @@
-<div class="card-product">
-  <div class="card-user">
+<% @products.each do |product| %>
+  <% if product.photo.present? %>
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path product.photo, height: 300, width: 400, crop: :fill %>')">
+      <div class="card-category">Vélo Cinelli à louer</div>
+        <div class="card-description">
+          <h2> <%= product.title %></h2>
+        </div>
+        <div class="price-description">
+          <p> <%= product.price %> €</p>
+          <p><%= product.category %></p>
+          <p><%= product.address %></p>
+        </div>
 
-  </div>
-  <div class="card-product-title">
+      <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/davidcrn">
+        <a class="card-link" href="#" ></a>
+    </div>
+  <% else %>
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path 'zayrptmcw9ui3koordzp', height: 300, width: 400, crop: :fill %>')">
+      <div class="card-category">Vélo Cinelli à louer</div>
+        <div class="card-description">
+          <h2> <%= product.title %></h2>
+        </div>
+        <div class="price-description">
+          <p> <%= product.price %> €</p>
+          <p><%= product.category %></p>
+          <p><%= product.address %></p>
+        </div>
+      <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/davidcrn">
+        <a class="card-link" href="#" ></a>
+    </div>
+  <% end %>
+<% end %>
 
-  <div class="card-product-price">
-
-  </div>
-  <div class="card-description">
-  </div>
-</div>
