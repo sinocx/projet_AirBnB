@@ -7,7 +7,10 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
+
 gem 'cloudinary'
+gem "pundit"
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'

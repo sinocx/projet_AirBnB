@@ -5,7 +5,7 @@ class Product < ApplicationRecord
   has_many :bookings
 
   validates :title, presence: true
-  validates :category, presence: true, inclusion: { in: CATEGORY }
+  validates :category, inclusion: { in: CATEGORY }, presence: true
   validates :description, presence: true
   validates :price, presence: true
 
