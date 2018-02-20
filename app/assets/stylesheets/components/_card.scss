@@ -6,12 +6,12 @@
   background-position: center;
   color: white;
   position: relative;
-  box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
 .card-user {
   position: absolute;
   right: 10px;
-  top: 10px;git
+  top: 10px;
   width: 40px;
   border-radius: 50%;
 }
@@ -32,8 +32,8 @@
 }
 .price-description {
   position: absolute;
-      top: 45px;
-    left: 10px;
+  top: 45px;
+  left: 10px;
 }
 .price-description p {
   font-size: 25px;
