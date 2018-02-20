@@ -5,11 +5,15 @@
       <%= link_to image_tag("ride-logo.jpg", alt: "logo"), '/', class: 'navbar-brand' %>
     </div>
     <div class="search-bar">
-    <form class="form-inline">
+      <%= form_tag(products_path, method: :get) do %>
+        <%= text_field_tag :query %>
+        <%= submit_tag 'Recherche' %>
+      <% end %>
+    </div>
+<!--     <form class="form-inline">
       <input class="form-control form-control-lg search" type="search" placeholder="Choisir une ville" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
-    </form>
-    </div>
+    </form> -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">

@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = policy_scope(Product).order(created_at: :desc)
+    @products = Product.where("title ILIKE ?", "%#{params[:query]}%")
   end
 
   def show
