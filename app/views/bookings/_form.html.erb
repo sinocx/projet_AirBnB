@@ -1,0 +1,7 @@
+<%= simple_form_for [@product, @booking] do |f| %>
+  <%= f.input :checkin%>
+  <%= f.input :checkout %>
+
+
+  <%= f.submit "Book", class: "btn btn-primary" %>
+<% end %>
