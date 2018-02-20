@@ -5,7 +5,7 @@
   <%= product.title %>
   <%= product.category %>
   <%= product.price %>
-  <%= product.image %>
+ <%= cl_image_tag product.photo, height: 300, width: 400, crop: :fill %>
   <%= product.address %>
 <% end %>
 
