@@ -5,7 +5,9 @@ class BookingsController < ApplicationController
   end
   def show
     @user = current_user
-    @booking = Booking.where(user: @user)
+
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def new
@@ -18,7 +20,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @product = Product.find(params[:product_id])
-    @user = current_user
+    @booking.user = current_user
+    @booking.product = @product
+     authorize @booking
     if @booking.save
       redirect_to products_path
     else
@@ -27,5 +31,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+  end
+  private
+  def booking_params
+    params.require(:booking).permit(:checkin, :checkout)
   end
 end

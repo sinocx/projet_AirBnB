@@ -1,51 +1,38 @@
-/* Main navbar */
-.navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
-  transition: all 0.3s ease;
-  height: 70px;
-  padding: 0px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
-}
-
 /* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
+.avatar {
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
 }
 
-/* Right section */
-.navbar-wagon-right {
+.navbar_content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+}
+.navbar-brand > img {
+  height: 50px;
+  width: 60px;
+  margin-left: -21px;
+}
+.search  {
+  margin-right: 10px;
 }
 
-/* Basic navbar item */
-.navbar-wagon-item {
-  cursor: pointer;
+.logo-navbar {
+  margin-top: -6px;
+  margin-right: 5px;
+}
+
+.search-bar {
+  flex: 1 0 auto;
   padding: 0 20px;
 }
 
-/* Navbar link */
-.navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
-}
-.navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
+.btn {
+  height: 39px;
 }
 
-/* Dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
@@ -74,4 +61,9 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.navbar-wagon-item {
+  cursor: pointer;
+  padding: 0 20px;
 }

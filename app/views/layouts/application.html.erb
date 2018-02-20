@@ -12,32 +12,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
-    <img src="../../assets/images/ride-logo.jpg" width="30" height="30" alt="logo">
-  </a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src="../../assets/images/ride-logo.jpg" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profil</a></li>
-          <li><a href="#">Se Déconnecter</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-
+    <%= render "shared/navbar" %>
     <%= yield %>
-    <%= render "../views/shared/footer" %>
+    <%= render "shared/footer" %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
