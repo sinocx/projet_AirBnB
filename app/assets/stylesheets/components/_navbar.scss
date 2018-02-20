@@ -4,8 +4,11 @@
   width: 45px;
   border-radius: 50%;
 }
-
+.navbar {
+  margin: 0;
+}
 .navbar_content {
+  margin: 0;
   display: flex;
   width: 100%;
   justify-content: space-around;
