@@ -5,16 +5,25 @@
       <%= link_to image_tag("ride-logo.jpg", alt: "logo"), '/', class: 'navbar-brand' %>
     </div>
     <div class="search-bar">
-    <form class="form-inline">
+      <%= form_tag(products_path, method: :get) do %>
+        <%= text_field_tag :query, "Choisir une ville", class: 'search_bar' %>
+        <%= submit_tag 'Recherche', class: "btn-search" %>
+      <% end %>
+    </div>
+<!--     <form class="form-inline">
       <input class="form-control form-control-lg search" type="search" placeholder="Choisir une ville" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
-    </form>
-    </div>
+    </form> -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <% if current_user && current_user.photo.present? %>
+            <%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"} %>
+          <% else %>
+            <%= image_tag "avatar.jpeg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"}%>
+            <% end %>
+       <!--    <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"> -->
           <ul class="dropdown-menu dropdown-menu-right pull-right navbar-wagon-dropdown-menu">
-            <li><a href="#">Profil</a></li>
+            <li> <%= link_to "Dashboard", dashboards_path  %> </li>
             <li> <%= link_to "se déconnecter", destroy_user_session_path, method: :delete %> </li>
           </ul>
         </div>
