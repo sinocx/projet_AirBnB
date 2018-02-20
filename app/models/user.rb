@@ -6,7 +6,7 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   has_many :bookings, dependent: :destroy
   has_many :products, through: :bookings, dependent: :destroy
-  # has_many :products, dependent: :destroy
+  has_many :products, dependent: :destroy
 
   validates :name, presence: true
   validates :address, presence: true
