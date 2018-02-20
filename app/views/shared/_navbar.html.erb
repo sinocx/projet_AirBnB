@@ -19,7 +19,7 @@
           <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
           <ul class="dropdown-menu dropdown-menu-right pull-right navbar-wagon-dropdown-menu">
             <li><a href="#">Profil</a></li>
-            <li><a href="#">Se Déconnecter</a></li>
+            <li> <%= link_to "se déconnecter", destroy_user_session_path, method: :delete %> </li>
           </ul>
         </div>
       </div>

@@ -5,7 +5,6 @@ class BookingsController < ApplicationController
   end
   def show
     @user = current_user
-
     @booking = Booking.find(params[:id])
     authorize @booking
   end
@@ -19,6 +18,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.status = "Pending"
     @product = Product.find(params[:product_id])
     @booking.user = current_user
     @booking.product = @product
