@@ -1,4 +1,5 @@
 <h1><%= @product.title %></h1>
 <h2><%= @product.category %></h2>
 <p><%= @product.description %></p>
+<%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
 <%= link_to "Return to products", products_path %>
