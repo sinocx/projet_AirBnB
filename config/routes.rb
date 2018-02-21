@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/dashboards' , to: "dashboards#dashboard"
+  get '/dashboards/bookings/:id' , to: "bookings#validate", as: "validate_booking"
+  get '/dashboards/bookings/:id/refuse' , to: "bookings#refuse", as: "refuse_booking"
+
 end

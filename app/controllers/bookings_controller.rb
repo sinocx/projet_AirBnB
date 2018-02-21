@@ -1,14 +1,5 @@
 class BookingsController < ApplicationController
 
-  def index
-    @bookings = policy_scope(Booking)
-  end
-  def show
-    @user = current_user
-    @booking = Booking.find(params[:id])
-    authorize @booking
-  end
-
   def new
     @product = Product.find(params[:product_id])
     @user = current_user
@@ -30,8 +21,26 @@ class BookingsController < ApplicationController
     end
   end
 
-  def destroy
+
+  def validate
+    # get the booking
+    @booking = Booking.find(params[:id])
+    # update the status
+    authorize @booking
+    @booking.status = "Validate"
+    @booking.save
+    # redirect to the dashboard
+    redirect_to dashboards_path
   end
+
+  def refuse
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.status = "Refuse"
+    @booking.save
+    redirect_to dashboards_path
+  end
+
   private
   def booking_params
     params.require(:booking).permit(:checkin, :checkout)
