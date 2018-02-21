@@ -1,0 +1,23 @@
+.product {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+
+}
+.product-img {
+  grid-row: 1 / span 1;
+  grid-columns: 1 /span 1;
+  background: cover;
+    border: 1px solid black
+
+}
+.product-description {
+  grid-row: 2 / span 1;
+  grid-columns: 1 /span 1;
+  border: 1px solid black
+}
+.product-map {
+    grid-row: 1 / span 2;
+  grid-columns: 2 /span 1;
+    border: 1px solid black;
+}
