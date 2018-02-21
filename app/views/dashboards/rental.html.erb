@@ -1,5 +1,5 @@
 <% @bookings.each do |booking| %>
-<p><%= @user.name %> | 
+<p><%= booking.product.user.name %> | 
 <%= booking.product.title %>
 <%= booking.product.address %> |
 <%= booking.product.price %>€ |
