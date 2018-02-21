@@ -11,6 +11,7 @@ gem 'redis'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
 gem "pundit"
+gem 'geocoder'
 
 
 gem 'autoprefixer-rails'
