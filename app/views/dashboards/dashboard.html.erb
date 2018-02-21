@@ -1,0 +1,36 @@
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Produit Loué')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Produit Acquis')">Paris</button>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  </div>
+
+
+<div class="message">
+  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <div class="message-name">
+    <h3>Gab Dehan</h3>
+    <p>10/07/17</p>
+  </div>
+  <div class="message-body">
+    <p><strong>I am not sure yet!</strong></p>
+    <p>
+      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+    </p>
+  </div>
+  <div class="message-status">
+    <p class="status pending">Pending</p>
+    <p class="price">€345</p>
+  </div>
+</div>
+
+<% @bookings.each do |booking| %>
+<p><%= @user.name %> | 
+<%= booking.product.title %>
+<%= booking.product.address %> |
+<%= booking.product.price %>€ |
+<%= booking.checkin %> | 
+<%= booking.checkout %> |
+<%= booking.status %></p>
+<% end %>
