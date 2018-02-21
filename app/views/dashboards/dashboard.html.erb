@@ -17,18 +17,14 @@
 
 <div id="Produit Acquis" class="tabcontent">
   <% @product_bookings.each do |booking| %>
-  <p><%= booking.product.title %>
-    <%= booking.product.address %> |
-    <%= booking.product.price %>€ |
-    <%= booking.checkin %> | 
-    <%= booking.checkout %> |
-    <%= booking.status %></p>
-   <!--  <#% if product.user. %> -->
-    <%= link_to "Valider", validate_booking_path(booking) %>
-    <%= link_to "Refuser", refuse_booking_path(booking) %>
-
+    <p><%= booking.product.title %>
+      <%= booking.product.address %> |
+      <%= booking.product.price %>€ |
+      <%= booking.checkin %> | 
+      <%= booking.checkout %> |
+      <%= booking.status %></p>
+     <!--  <#% if product.user. %> -->
+      <%= link_to "Valider", validate_booking_path(booking) %>
+      <%= link_to "Refuser", refuse_booking_path(booking) %>
     <% end %>
-
-
 </div>
-

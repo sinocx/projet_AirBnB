@@ -14,6 +14,7 @@ gem "pundit"
 gem 'geocoder'
 
 
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
