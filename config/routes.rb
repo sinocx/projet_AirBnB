@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   end
 
   get '/dashboards' , to: "dashboards#rental"
-  get '/dashboards' , to: "dashboards#offer"
+  get '/dashboards/bookings/:id' , to: "bookings#validate"
 end

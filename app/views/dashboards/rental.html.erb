@@ -1,9 +1,12 @@
 <% @bookings.each do |booking| %>
-<p><%= @user.name %> | 
+<p><%= booking.product.user.name %> | 
 <%= booking.product.title %>
 <%= booking.product.address %> |
 <%= booking.product.price %>€ |
 <%= booking.checkin %> | 
 <%= booking.checkout %> |
 <%= booking.status %></p>
+<!-- add a link -->
+
+
 <% end %>
