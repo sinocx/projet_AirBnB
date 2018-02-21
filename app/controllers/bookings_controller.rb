@@ -31,7 +31,22 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
   end
+
+  def validate
+    raise
+    # get the booking
+    # update the status
+    # redirect to the dashboard
+  end
+
+  def refuse
+  end
+
   private
   def booking_params
     params.require(:booking).permit(:checkin, :checkout)
