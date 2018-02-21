@@ -4,7 +4,7 @@
     <p>Recherche en toute tranquillité</p>
     <div class="formulaire">
     <%= form_tag(products_path, method: :get) do %>
-      <%= text_field_tag :query, "Où te trouves tu ? ", class: "barre"%>
+      <%= text_field_tag :query, nil, placeholder: "Où te trouves tu ? ", class: "barre"%>
       <%= submit_tag 'Search', class: "btn btn-primary" %>
     <% end %>
     </div>
