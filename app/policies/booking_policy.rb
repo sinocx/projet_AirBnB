@@ -19,7 +19,7 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def refuse?
-    record.user == user
+    record.product.user == user
   end
 
   class Scope < Scope
