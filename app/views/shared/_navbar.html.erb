@@ -6,7 +6,7 @@
     </div>
     <div class="search-bar">
       <%= form_tag(products_path, method: :get) do %>
-        <%= text_field_tag :query, "Choisir une ville", class: 'search_bar' %>
+        <%= text_field_tag :query, nil, placeholder: "Choisir une ville", class: 'search_bar' %>
         <%= submit_tag 'Recherche', class: "btn-search" %>
       <% end %>
     </div>
@@ -32,18 +32,3 @@
   </div>
 </nav>
 
-<!--   </div> -->
-
-
-
-<!-- <nav class="navbar navbar-light bg-light">
-
-  <form class="form-inline">
-
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
-  </form>
-
-</nav> -->
