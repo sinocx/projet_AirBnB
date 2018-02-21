@@ -1,6 +1,6 @@
 <div class="tab">
-  <button class="tablinks" onclick="openBooking(event, 'Produit Loué')">Produit Loué</button>
-  <button class="tablinks" onclick="openBooking(event, 'Produit Acquis')">Produit Acquis</button>
+  <button class="tablinks" onclick="openBooking(event, 'Produit Loué')">Location</button>
+  <button class="tablinks" onclick="openBooking(event, 'Produit Acquis')">Produit</button>
 </div>
 
 <div id="Produit Loué" class="tabcontent">
@@ -12,21 +12,23 @@
     <%= booking.checkin %> | 
     <%= booking.checkout %> |
     <%= booking.status %></p>
-    <%= link_to "Valider", validate_booking_path(booking) %>
-    <%= link_to "Refuser", refuse_booking_path(booking) %>
   <% end %>
 </div>
 
 <div id="Produit Acquis" class="tabcontent">
-  <% @products.each do |product| %>
-    <p><%= product.user.name %> | 
-    <%= product.title %>
-    <%= product.address %> |
-    <%= product.price %>€ |</p>
-    <% @bookings.each do |booking| %>
-      <p><%= booking.status %></p>
-    </%>
+  <% @product_bookings.each do |booking| %>
+  <p><%= booking.product.title %>
+    <%= booking.product.address %> |
+    <%= booking.product.price %>€ |
+    <%= booking.checkin %> | 
+    <%= booking.checkout %> |
+    <%= booking.status %></p>
+   <!--  <#% if product.user. %> -->
+    <%= link_to "Valider", validate_booking_path(booking) %>
+    <%= link_to "Refuser", refuse_booking_path(booking) %>
+
     <% end %>
-  <% end %>
+
+
 </div>
 
