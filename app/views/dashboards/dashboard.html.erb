@@ -1,39 +1,32 @@
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Produit Loué')">Produit Loué</button>
-  <button class="tablinks" onclick="openCity(event, 'Produit Acquis')">Produit Acquis</button>
+  <button class="tablinks" onclick="openBooking(event, 'Produit Loué')">Produit Loué</button>
+  <button class="tablinks" onclick="openBooking(event, 'Produit Acquis')">Produit Acquis</button>
 </div>
 
 <div id="Produit Loué" class="tabcontent">
-  </div>
-
-
-<div class="message">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-  <div class="message-name">
-    <h3>Gab Dehan</h3>
-    <p>10/07/17</p>
-  </div>
-  <div class="message-body">
-    <p><strong>I am not sure yet!</strong></p>
-    <p>
-      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
-    </p>
-  </div>
-  <div class="message-status">
-    <p class="status pending">Pending</p>
-    <p class="price">€345</p>
-  </div>
+  <% @bookings.each do |booking| %>
+    <p><%= booking.product.user.name %> | 
+    <%= booking.product.title %>
+    <%= booking.product.address %> |
+    <%= booking.product.price %>€ |
+    <%= booking.checkin %> | 
+    <%= booking.checkout %> |
+    <%= booking.status %></p>
+    <%= link_to "Valider", validate_booking_path(booking) %>
+    <%= link_to "Refuser", refuse_booking_path(booking) %>
+  <% end %>
 </div>
 
-<% @bookings.each do |booking| %>
-  <p><%= booking.product.user.name %> | 
-  <%= booking.product.title %>
-  <%= booking.product.address %> |
-  <%= booking.product.price %>€ |
-  <%= booking.checkin %> | 
-  <%= booking.checkout %> |
-  <%= booking.status %></p>
-  <%= link_to "Validate", validate_booking_path(booking) %>
-  <%= link_to "Refuse", refuse_booking_path(booking) %>
+<div id="Produit Acquis" class="tabcontent">
+  <% @products.each do |product| %>
+    <p><%= product.user.name %> | 
+    <%= product.title %>
+    <%= product.address %> |
+    <%= product.price %>€ |</p>
+    <% @bookings.each do |booking| %>
+      <p><%= booking.status %></p>
+    </%>
+    <% end %>
+  <% end %>
+</div>
 
-<% end %>
