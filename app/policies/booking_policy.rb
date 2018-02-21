@@ -14,6 +14,14 @@ class BookingPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def validate?
+    record.user == user
+  end
+
+  def refuse?
+    record.user == user
+  end
+
   class Scope < Scope
     def resolve
       scope.all
