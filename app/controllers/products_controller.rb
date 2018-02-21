@@ -36,9 +36,10 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.user = current_user
     authorize @product
-    if @product.save!
+    if @product.save
       redirect_to product_path(@product)
-    else render :new
+    else
+      render :new
     end
   end
 
