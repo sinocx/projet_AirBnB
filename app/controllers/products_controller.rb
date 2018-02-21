@@ -1,8 +1,16 @@
 class ProductsController < ApplicationController
   def index
     @products = policy_scope(Product).order(created_at: :desc)
-
     @product = Product.where("address ILIKE ?", "%#{params[:query]}%")
+    @products = Product.where.not(latitude: nil, longitude: nil)
+
+    @markers = @products.map do |product|
+      {
+        lat: product.latitude,
+        lng: product.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
 
   end
 

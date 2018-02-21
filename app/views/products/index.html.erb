@@ -1,2 +1,9 @@
   <%= render 'Component/card' %>
 <%= link_to "Ajouter un produit", new_product_path  %>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
