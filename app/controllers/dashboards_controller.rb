@@ -1,7 +1,7 @@
 class DashboardsController < ApplicationController
   skip_after_action :verify_authorized
 
-  def rental
+  def dashboard
     if user_signed_in?
       @user = current_user
       @bookings = Booking.where(user: @user)
