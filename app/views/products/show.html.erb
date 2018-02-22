@@ -1,28 +1,33 @@
-<%= link_to "Return to products", products_path %>
-<div class="wrapper">
+<%= link_to "Retour au produit", products_path,class: "btn btn-success center" %>
+<div class="wrappers">
   <div class="container">
     <div class="product">
       <div class="product-img">
-
-
-      <%= cl_image_tag @product.photo, height: 500, width: 500, crop: :scale %>
-
+      <%= cl_image_tag @product.photo, height: 380, width: 480, crop: :scale %>
       </div>
       <div class="product-map">
         <div
           id="map"
           style="width: 600px;
-          height: 600px;
+          height: 100%;
           position: sticky !important;
           top: 0;"
           data-markers="<%= @markers.to_json %>"
         ></div>
       </div>
       <div class="product-description">
-        <%= link_to "Reserver", new_product_booking_path(@product), class: "btn btn-success", style: "padding: 10px " %>
-        <h1><%= @product.title %></h1>
-        <h2><%= @product.category %></h2>
-        <p><%= @product.description %></p
+        <div class="product-title">
+          <h1><%= @product.title %></h1>
+        </div>
+        <div class="product-category">
+          <h2><%= @product.category %></h2>
+        </div>
+        <div class="product-show-description">
+          <p><%= @product.description %></p>
+        </div>
+        <div class="reservation">
+          <%= link_to "Reserver", new_product_booking_path(@product), class: "btn btn-success center" %>
+        </div>
       </div>
     </div>
   </div>

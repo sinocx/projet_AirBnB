@@ -1,19 +1,22 @@
 <% @products.each do |product| %>
   <div class="col-xs-4">
     <% if product.photo.present? %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
              url('<%= cl_image_path product.photo, height: 300, width: 300, :crop =>"scale" %>')">
         <div class="card-category">
-            <p><%= product.category %></p></div>
+            <h2><%= product.category.capitalize %></h2></div>
           <div class="card-description">
             <h2> <%= product.title %></h2>
           </div>
           <div class="price-description">
-            <p><%= product.price %> €</p>
-            <p><%= product.address %></p>
+            <p><%= product.price %>€ / jours</p>
           </div>
-
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/davidcrn">
+          <% if product.user.photo.present? %>
+            <%= image_tag product.user.photo, class: "card-user" %>
+          <% else %>
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/davidcrn">
+          <% end %>
+        <!-- <%#= image_tag product.user.photo, crop: :fill, class: "card-user" %> -->
         <%= link_to "", product_path(product), class: "card-link" %>
       </div>
     <% else %>
