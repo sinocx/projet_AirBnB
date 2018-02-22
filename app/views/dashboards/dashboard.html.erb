@@ -1,4 +1,4 @@
-<div>
+
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
@@ -8,41 +8,61 @@
   </ul>
 
   <!-- Tab panes -->
+<div class="container">
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="home">
-        <% @product_bookings.each do |booking| %>
-      <div class="content-resa">
-
-          <p><%= booking.product.title %>
-            <%= booking.product.address %> |
-            <%= booking.product.price %>€ |
-            <%= booking.checkin %> | 
-            <%= booking.checkout %> |
-            <%= booking.status %></p>
-            <div class="btn-deux">
-        <%= link_to "Valider", validate_booking_path(booking), class: "btn-valide" %>
-        <%= link_to "Refuser", refuse_booking_path(booking), class: "btn-refuse" %>
+      <% @product_bookings.each do |booking| %>
+        <div class="content-resa">
+          <div class="debut">
+            <p><%= booking.product.title %></p>
+          </div>
+          <div class="milieu">
+            <div class="adress">
+              <p><%= booking.product.address %> </p>
             </div>
-      </div>
+            <div class="price">
+              <p><%= booking.product.price %>€ </p>
+            </div>
+          </div>
+          <div class="fin">
+            <div class="date">
+              <p><%= booking.checkin %> </p> 
+              <p><%= booking.checkout %> </p>
+            </div>
+            <div class="status">
+              <p><%= booking.status %></p>
+            <div class="btn-deux">
+              <%= link_to "Valider", validate_booking_path(booking), class: "btn-valide" %>
+              <%= link_to "Refuser", refuse_booking_path(booking), class: "btn-refuse" %>
+            </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="profile">
+      <% @bookings.each do |booking| %>
+        <div class="content-loca">
+          <div class="debut">
+            <p><%= booking.product.user.name %></p> 
+            <p><%= booking.product.title %></p>
+          </div>
+          <div class="milieu">
+            <p><%= booking.product.address %></p>
+            <p><%= booking.product.price %>€</p>
+            <p><%= booking.checkin %></p> 
+            <p><%= booking.checkout %></p>
+          </div>
+          <div class="fin">
+            <p><%= booking.status %></p>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
-      <div role="tabpanel" class="tab-pane fade" id="profile">
-        <% @bookings.each do |booking| %>
-          <p><%= booking.product.user.name %> | 
-          <%= booking.product.title %>
-          <%= booking.product.address %> |
-          <%= booking.product.price %>€ |
-          <%= booking.checkin %> | 
-          <%= booking.checkout %> |
-          <%= booking.status %></p>
-        <% end %>
-      </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-  </div>
-
+  <div role="tabpanel" class="tab-pane" id="messages">...</div>
+  <div role="tabpanel" class="tab-pane" id="settings">...</div>
+</div>
 
 
 

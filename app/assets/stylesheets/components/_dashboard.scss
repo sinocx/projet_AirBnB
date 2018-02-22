@@ -80,8 +80,43 @@ p {
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+  justify-content: space-between;
+  border: 1px solid black;
 }
 
 .btn-deux {
+  padding: 10px;
+}
+
+.debut{
+
+}
+
+.milieu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date {
+
+}
+
+.fin {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  min-resolution: res;-width: 600px;
+}
+
+.content-loca {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+  justify-content: space-between;
+  border: 1px solid black;
   padding: 10px;
 }
