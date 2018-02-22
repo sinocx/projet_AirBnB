@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+#map {
+  height: 100vh;
+  position: sticky !important;
+  top: 0;
+}
