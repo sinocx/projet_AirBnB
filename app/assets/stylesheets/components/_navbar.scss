@@ -14,7 +14,8 @@
   width: 100%;
   align-items: center;
   justify-content: space-around;
-  background-color: #FFEFB4;
+  background-color: #F4F4F4;
+  border-bottom: 3px solid #F96D00;
 }
 .navbar-brand > img {
   height: 39px;
@@ -94,13 +95,13 @@
   color: white;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #970747;
+  background: #343A40;
   transition: background 0.3s ease;
   text-decoration: none !important;
 }
 
 .btn-add:hover {
-  background-color: #AF3264;
+  background-color: #999999;
   color: white;
 }
 
@@ -108,17 +109,19 @@
   padding: 10px 15px;
   border: 0;
   width: 370px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+  border-radius: 4px;
 }
 .btn-recherche {
   color: white;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #970747;
+  background: #343A40;
   transition: background 0.3s ease;
   text-decoration: none !important;
 }
 
 .btn-recherche:hover {
-  background-color: #AF3264;
+  background-color: #999999;
   color: white;
 }
