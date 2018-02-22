@@ -1,30 +1,29 @@
-
-<nav class="navbar navbar-dark bg-dark">
   <div class="navbar_content">
     <div class="logo-navbar">
       <%= link_to image_tag("ride-logo.jpg", alt: "logo"), '/', class: 'navbar-brand' %>
     </div>
     <div class="search-bar">
       <%= form_tag(products_path, method: :get) do %>
-        <%= text_field_tag :query, nil, placeholder: "Choisir une ville", class: 'search_bar' %>
-        <%= submit_tag 'Recherche', class: "btn-search" %>
+      <%= text_field_tag :query, nil, placeholder: "Choisir une ville", class: 'btn-sea' %>
+      <%= submit_tag 'Recherche', class: "btn-recherche" %>
       <% end %>
-      <%= link_to "Ajouter un produit", new_product_path  %>
     </div>
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <% if current_user && current_user.photo.present? %>
-            <%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"} %>
-          <% else %>
-            <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"}%>
-          <% end %>
-          <ul class="dropdown-menu dropdown-menu-right pull-right navbar-wagon-dropdown-menu">
-            <li> <%= link_to "Dashboard", dashboards_path  %> </li>
-            <li> <%= link_to "se déconnecter", destroy_user_session_path, method: :delete %> </li>
-          </ul>
-        </div>
+    <div class="link">
+      <%= link_to "Ajouter un produit", new_product_path, class: 'btn-add'  %>
+    </div>
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <% if current_user && current_user.photo.present? %>
+        <%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"} %>
+        <% else %>
+        <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"}%>
+        <% end %>
+        <ul class="dropdown-menu dropdown-menu-right pull-right navbar-wagon-dropdown-menu">
+          <li> <%= link_to "Dashboard", dashboards_path  %> </li>
+          <li> <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %> </li>
+        </ul>
       </div>
     </div>
   </div>
-</nav>
+
 

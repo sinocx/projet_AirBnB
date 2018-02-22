@@ -3,11 +3,27 @@ url('<%= cl_image_path 'wwmw82lryvf1pafwzwfq', crop: :fit; %>');">
   <div class="banner-content">
     <h1>Ride</h1>
     <p>Recherche en toute tranquillité</p>
+
     <div class="formulaire">
-     <%= form_tag(products_path, method: :get) do %>
-      <%= text_field_tag :query, nil, placeholder: "Où te trouves-tu ?", class: "barre"%>
+    <%= form_tag(products_path, method: :get) do %>
+      <%= text_field_tag :query, nil, placeholder: "Où te trouves tu ? ", class: "barre"%>
       <%= submit_tag 'Search', class: "btn btn-primary" %>
     <% end %>
     </div>
  </div>
 </div>
+
+
+<div class="presentation">
+
+    <div class="skate">
+      <h1 ><%= image_tag "skate.jpg", class: "card-skate" %></h1>
+    </div>
+    <div class="trottinette">
+      <h1><%= image_tag "avatar.jpg", class: "card-skate" %></h1>
+    </div>
+    <div class="facile">
+      <h1><%= image_tag "avatar.jpg", class: "card-skate" %></h1>
+    </div>
+</div>
+
