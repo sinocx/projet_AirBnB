@@ -1,9 +1,11 @@
-<%= link_to "Retour au produit", products_path,class: "btn btn-success center" %>
 <div class="wrappers">
   <div class="container">
+    <div class="li">
+      <%= link_to "Retour aux produits", products_path%>
+    </div>
     <div class="product">
       <div class="product-img">
-      <%= cl_image_tag @product.photo, height: 380, width: 480, crop: :scale %>
+      <%= cl_image_tag @product.photo, height: 380, width: 480, crop: :scale, class: "show-img" %>
       </div>
       <div class="product-map">
         <div
@@ -26,8 +28,34 @@
           <p><%= @product.description %></p>
         </div>
         <div class="reservation">
-          <%= link_to "Reserver", new_product_booking_path(@product), class: "btn btn-success center" %>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+            Reserver
+          </button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Réservation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'bookings/form' %>
+      </div>
+      <div class="modal-footer">
+
       </div>
     </div>
   </div>
