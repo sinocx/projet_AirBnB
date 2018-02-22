@@ -15,11 +15,11 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def validate?
-    record.user == user
+    record.product.user == user
   end
 
   def refuse?
-    record.user == user
+    record.product.user == user
   end
 
   class Scope < Scope

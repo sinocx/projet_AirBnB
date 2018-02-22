@@ -19,6 +19,7 @@
         ></div>
       </div>
       <div class="product-description">
+        <%= link_to "Reserver", new_product_booking_path(@product), class: "btn btn-success", style: "padding: 10px " %>
         <h1><%= @product.title %></h1>
         <h2><%= @product.category %></h2>
         <p><%= @product.description %></p

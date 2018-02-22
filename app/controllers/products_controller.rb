@@ -1,9 +1,14 @@
 class ProductsController < ApplicationController
   def index
-    @products = policy_scope(Product).order(created_at: :desc)
-    @product = Product.where("address ILIKE ?", "%#{params[:query]}%")
-    @products = Product.where.not(latitude: nil, longitude: nil)
-
+    if params[:query].present?
+      @product = policy_scope(Product).order(created_at: :desc)
+      @products = Product.where("address ILIKE ?", "%#{params[:query]}%").where.not(latitude: nil, longitude: nil)
+      if @products.blank?
+        @products = policy_scope(Product).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
+      end
+    else
+      @products = policy_scope(Product).order(created_at: :desc).where.not(latitude: nil, longitude: nil)
+    end
     @markers = @products.map do |product|
       {
         lat: product.latitude,
@@ -27,7 +32,7 @@ class ProductsController < ApplicationController
       }
     end
 
-    
+
   end
 
   def new
@@ -41,7 +46,8 @@ class ProductsController < ApplicationController
     authorize @product
     if @product.save
       redirect_to product_path(@product)
-    else render :new
+    else
+      render :new
     end
   end
 
