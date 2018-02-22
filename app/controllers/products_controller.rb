@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   def index
     @products = policy_scope(Product).order(created_at: :desc)
     @product = Product.where("address ILIKE ?", "%#{params[:query]}%")
+
     @products = Product.where.not(latitude: nil, longitude: nil)
 
     @markers = @products.map do |product|
