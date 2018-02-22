@@ -1,9 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/paris');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/londres');">
   <div class="banner-content">
     <h1>RIDE</h1>
     <p>Recherche en toute tranquillité</p>
     <div class="formulaire">
-    <%= form_tag(products_path, method: :get) do %>
+     <%= form_tag(products_path, method: :get) do %>
       <%= text_field_tag :query, nil, placeholder: "Où te trouves-tu ?", class: "barre"%>
       <%= submit_tag 'Search', class: "btn btn-primary" %>
     <% end %>
