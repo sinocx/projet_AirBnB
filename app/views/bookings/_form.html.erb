@@ -1,7 +1,10 @@
-<%= simple_form_for [@product, @booking] do |f| %>
-  <%= f.input :checkin%>
-  <%= f.input :checkout %>
-
-
-  <%= f.submit "Book", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Date de votre réservation</h2>
+     <%= simple_form_for [@product, @booking] do |f| %>
+       <%= f.input :checkin, as: :string, required: false, input_html: {class: "datepicker"} %>
+       <%= f.input :checkout, as: :string, required: false, input_html: {class: "datepicker"} %>
+       <%= f.submit "Book", class: "btn btn-primary" %>
+     <% end %>
+  </div>
+</div>
