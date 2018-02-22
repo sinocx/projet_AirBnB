@@ -12,30 +12,33 @@
   margin: 0;
   display: flex;
   width: 100%;
+  align-items: center;
   justify-content: space-around;
+  background-color: #FFEFB4;
 }
 .navbar-brand > img {
-  height: 50px;
-  width: 60px;
-  margin-left: -21px;
-}
-.search  {
-  margin-right: 10px;
+  height: 39px;
+  width: 61px;
+  margin-left: 6px;
+  margin-top: 5px;
 }
 
 .logo-navbar {
   margin-top: -6px;
-  margin-right: 5px;
+  margin-right: 90px;
 }
 
 .search-bar {
   flex: 1 0 auto;
   padding: 0 20px;
   color: black;
+  padding-bottom: 7px;
+  padding-top: 7px;
 }
 
 .btn {
   height: 39px;
+  width: 164px;
 }
 
 .navbar-wagon-dropdown-menu {
@@ -84,4 +87,38 @@
   background-color: white;
   border: black;
   height: 45px;
+}
+
+
+.btn-add {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: #970747;
+  transition: background 0.3s ease;
+  text-decoration: none !important;
+}
+
+.btn-add:hover {
+  background-color: #AF3264;
+  color: white;
+}
+
+.btn-sea {
+  padding: 10px 15px;
+  border: 0;
+  width: 370px;
+}
+.btn-recherche {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background: #970747;
+  transition: background 0.3s ease;
+  text-decoration: none !important;
+}
+
+.btn-recherche:hover {
+  background-color: #AF3264;
+  color: white;
 }
