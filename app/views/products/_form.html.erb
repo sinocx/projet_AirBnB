@@ -1,14 +1,15 @@
-<%= simple_form_for(@product) do |f| %>
+<div class="formule">
+  <%= simple_form_for(@product) do |f| %>
   <%= f.input :title, placeholder: "Votre product" %>
-  <%= f.select :category, Product::CATEGORY, prompt: "Choisissez une catégorie" %>
-  <%= f.input :description, placeholder: "Description de votre produit" %>
+  <%= f.select :category, Product::CATEGORY, prompt: "Choisissez une catégorie" %><br>
+  <br><%= f.input :description, placeholder: "Description de votre produit" %>
   <%= f.input :address %>
   <%= f.input :price, placeholder: "Prix" %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
 
-  <%= f.button :submit, class: "btn btn-primary button"   %>
+  <%= f.button :submit, class: "search-button"   %>
 
 <% end %>
-
+</div>
 
