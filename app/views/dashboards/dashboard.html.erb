@@ -1,30 +1,53 @@
-<div class="tab">
-  <button class="tablinks" onclick="openBooking(event, 'Produit Loué')">Location</button>
-  <button class="tablinks" onclick="openBooking(event, 'Produit Acquis')">Produit</button>
-</div>
+<div>
 
-<div id="Produit Loué" class="tabcontent">
-  <% @bookings.each do |booking| %>
-    <p><%= booking.product.user.name %> | 
-    <%= booking.product.title %>
-    <%= booking.product.address %> |
-    <%= booking.product.price %>€ |
-    <%= booking.checkin %> | 
-    <%= booking.checkout %> |
-    <%= booking.status %></p>
-  <% end %>
-</div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Reservation</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mes Locations</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Mes Produits</a></li>
+  </ul>
 
-<div id="Produit Acquis" class="tabcontent">
-  <% @product_bookings.each do |booking| %>
-    <p><%= booking.product.title %>
-      <%= booking.product.address %> |
-      <%= booking.product.price %>€ |
-      <%= booking.checkin %> | 
-      <%= booking.checkout %> |
-      <%= booking.status %></p>
-     <!--  <#% if product.user. %> -->
-      <%= link_to "Valider", validate_booking_path(booking) %>
-      <%= link_to "Refuser", refuse_booking_path(booking) %>
-    <% end %>
-</div>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home">
+        <% @product_bookings.each do |booking| %>
+      <div class="content-resa">
+
+          <p><%= booking.product.title %>
+            <%= booking.product.address %> |
+            <%= booking.product.price %>€ |
+            <%= booking.checkin %> | 
+            <%= booking.checkout %> |
+            <%= booking.status %></p>
+            <div class="btn-deux">
+        <%= link_to "Valider", validate_booking_path(booking), class: "btn-valide" %>
+        <%= link_to "Refuser", refuse_booking_path(booking), class: "btn-refuse" %>
+            </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+      <div role="tabpanel" class="tab-pane fade" id="profile">
+        <% @bookings.each do |booking| %>
+          <p><%= booking.product.user.name %> | 
+          <%= booking.product.title %>
+          <%= booking.product.address %> |
+          <%= booking.product.price %>€ |
+          <%= booking.checkin %> | 
+          <%= booking.checkout %> |
+          <%= booking.status %></p>
+        <% end %>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+
+
+
+
+
+
+
+
+
