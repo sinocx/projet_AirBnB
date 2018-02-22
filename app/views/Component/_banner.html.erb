@@ -1,5 +1,5 @@
 <div class="banner" style="background-image:
-url('<%= cl_image_path 'wwmw82lryvf1pafwzwfq', crop: :fit; %>');">
+url('<%= image_path "banner-cop.jpg", crop: :fill; %>');">
   <div class="banner-content">
     <h1>Ride</h1>
     <p>Recherche en toute tranquillité</p>
@@ -7,7 +7,7 @@ url('<%= cl_image_path 'wwmw82lryvf1pafwzwfq', crop: :fit; %>');">
     <div class="formulaire">
     <%= form_tag(products_path, method: :get) do %>
       <%= text_field_tag :query, nil, placeholder: "Où te trouves tu ? ", class: "barre"%>
-      <%= submit_tag 'Search', class: "btn btn-primary" %>
+      <%= submit_tag 'Search', class: "search-button" %>
     <% end %>
     </div>
  </div>
@@ -17,13 +17,16 @@ url('<%= cl_image_path 'wwmw82lryvf1pafwzwfq', crop: :fit; %>');">
 <div class="presentation">
 
     <div class="skate">
-      <h1 ><%= image_tag "skate.jpg", class: "card-skate" %></h1>
+      <h1 ><%= image_tag "skate.jpg", class: "img-circle" %></h1>
+      <p>Skate</p>
     </div>
     <div class="trottinette">
-      <h1><%= image_tag "trottinette.jpg", class: "card-skate" %></h1>
+      <h1><%= image_tag "trottinette.jpg", class: "img-circle" %></h1>
+      <p>Trottinette</p>
     </div>
     <div class="velo">
-      <h1><%= image_tag "avatar.jpg", class: "card-skate" %></h1>
+      <h1><%= image_tag "velo.jpg", class: "img-circle" %></h1>
+      <p>Vélo</p>
     </div>
 </div>
 

@@ -2,12 +2,29 @@
     display: flex;
     justify-content: space-around;
     height: 300px;
-    align-items: center
+    align-items: center;
+    text-align: center;
 }
 
-.card-skate {
+.presentation p {
+  font-size: 20px;
+}
+
+.img-circle {
   border-radius: 50%;
   height: 200px;
-
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%) brightness(0.7) contrast(150%);
+  transition-property: filter;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
 }
+
+.img-circle:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%) brightness(1);
+  // background-image: url('<%= image_path "skate-nb.jpg" %>')
+}
+
+
 
