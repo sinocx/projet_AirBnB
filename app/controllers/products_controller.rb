@@ -15,16 +15,19 @@ class ProductsController < ApplicationController
   end
 
   def show
-
     @product = Product.find(params[:id])
-    @markers =
-    [  {
-            lat: @product.latitude,
-            lng: @product.longitude#,
-            # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-          }]
     authorize @product
+    @products = []
+    @products << @product
+    @markers = @products.map do |product|
+      {
+        lat: product.latitude,
+        lng: product.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
 
+    
   end
 
   def new
