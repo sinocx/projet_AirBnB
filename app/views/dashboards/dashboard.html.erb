@@ -14,9 +14,10 @@
       <% @product_bookings.each do |booking| %>
         <div class="content-resa">
           <div class="debut">
-            <p><%= booking.product.title %></p>
-          </div>
-          <div class="milieu">
+            <div class="title">
+              <p><%= booking.product.title %></p>
+              <p><%= image_tag booking.product.photo, class: "photo" %></p>
+            </div>
             <div class="adress">
               <p><%= booking.product.address %> </p>
             </div>
@@ -42,19 +43,30 @@
     </div>
     <div role="tabpanel" class="tab-pane fade" id="profile">
       <% @bookings.each do |booking| %>
-        <div class="content-loca">
+        <div class="content-resa">
           <div class="debut">
-            <p><%= booking.product.user.name %></p> 
-            <p><%= booking.product.title %></p>
+            <div class="title">
+              <p><%= booking.product.title %></p>
+              <p><%= image_tag booking.product.photo, class: "photo" %></p>
+            </div>
+            <div class="name">
+              <p><%= booking.product.user.name %></p>   
+            </div>
+            <div class="adress">
+              <p><%= booking.product.address %></p>
+            </div>
+            <div class="price">
+              <p><%= booking.product.price %>€</p>
+            </div>
           </div>
-          <div class="milieu">
-            <p><%= booking.product.address %></p>
-            <p><%= booking.product.price %>€</p>
-            <p><%= booking.checkin %></p> 
-            <p><%= booking.checkout %></p>
-          </div>
-          <div class="fin">
-            <p><%= booking.status %></p>
+          <div class="fin2">
+            <div class="date">
+              <p><%= booking.checkin %></p> 
+              <p><%= booking.checkout %></p>
+            </div>
+            <div class="status">
+              <p><%= booking.status %></p>
+            </div>
           </div>
         </div>
       <% end %>

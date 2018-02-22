@@ -1,59 +1,3 @@
-// .message {
-//   display: flex;
-//   align-items: center;
-//   padding: 20px;
-//   border-bottom: 1px solid rgba(220,224,244,0.4);
-// }
-// .message:last-child {
-//   border-bottom: none;
-// }
-// .message-body {
-//   flex-grow: 1;
-// }
-// .message-name {
-//   padding-left: 10px;
-//   min-width: 100px;
-// }
-// .message-name h3 {
-//   font-size: 13px;
-//   margin-bottom: 0px;
-// }
-// .message-name p {
-//   font-size: 13px;
-//   font-weight: lighter;
-//   opacity: 0.6;
-//   margin-top: 5px;
-// }
-// .message-body {
-//   padding-left: 10px;
-//   font-size: 13px;
-//   color: rgba(0,0,0,0.7);
-// }
-// .message-body {
-//   padding-left: 20px;
-//   color: rgba(0,0,0,0.4);
-// }
-// .message-body strong{
-//   color: rgba(0,0,0,0.9);
-//   color: rgba(0,0,0,0.9);
-// }
-// .message-body p {
-//   margin: 6px 0;
-// }
-// .message-status {
-//   font-size: 14px;
-//   font-weight: bold;
-// }
-// .status.accepted {
-//   color: #04A366;
-// }
-// .status.declined {
-//   color: red;
-// }
-// .status.pending {
-//   color: lightgrey;
-// }
-
 .btn-valide {
   color: white;
   background-color: blue;
@@ -87,19 +31,29 @@ p {
 .btn-deux {
   padding: 10px;
 }
-
-.debut{
-
-}
-
-.milieu {
-  display: flex;
+.debut {
+  width: 70%;
   align-items: center;
+  display: flex;
   justify-content: space-between;
+  .title {
+    width: 250px;
+  }
+
+  .adress {
+    padding: 0px;
+    flex: 1 0 auto;
+    margin-left: 10px;
+  }
 }
+
 
 .date {
+  padding: 0px 10px;
+}
 
+.status {
+  text-align: center;
 }
 
 .fin {
@@ -107,9 +61,20 @@ p {
   justify-content: space-between;
 }
 
+.fin2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   min-resolution: res;-width: 600px;
 }
+
+.photo {
+  width: 140px;
+}
+
 
 .content-loca {
   display: flex;
@@ -118,5 +83,10 @@ p {
   border-bottom: 1px solid rgba(220,224,244,0.4);
   justify-content: space-between;
   border: 1px solid black;
-  padding: 10px;
+}
+
+.name {
+  padding: 0px;
+  flex: 1 0 auto;
+  margin-left: 10px;
 }
