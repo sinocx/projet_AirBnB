@@ -14,7 +14,7 @@
   width: 100%;
   align-items: center;
   justify-content: space-around;
-  background-color: #F4F4F4;
+  background-color: #F4F4F4 !important;
   border-bottom: 3px solid #F96D00;
 }
 .navbar-brand > img {
@@ -86,16 +86,16 @@
 .btn-search {
   border-radius: 4px;
   background-color: white;
-  border: black;
+  // border: black;
   height: 45px;
 }
 
 
 .btn-add {
-  color: white;
+  color: black;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #343A40;
+  background: rgb(250,250,250);;
   transition: background 0.3s ease;
   text-decoration: none !important;
 }
@@ -113,10 +113,10 @@
   border-radius: 4px;
 }
 .btn-recherche {
-  color: white;
+  color: black;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #343A40;
+  background:rgb(250,250,250);
   transition: background 0.3s ease;
   text-decoration: none !important;
 }

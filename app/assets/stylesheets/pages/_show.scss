@@ -5,8 +5,12 @@
   grid-template-rows: 400px 100px;
 
 }
+.container {
+  margin-top: 0;
+  margin-bottom:0;
+}
 .wrappers {
-  background: rgb(220,220,220);
+  background: #F4F4F4;
 }
 .modal {
   padding-top: 125px
@@ -29,23 +33,25 @@
   grid-columns: 1 /span 1;
   background: cover;
   margin-right: 20px;
-  margin-bottom: 20px;
+  border-radius: 4px 4px 0 0!important;
+  // margin-bottom: 20px;
   // border: 1px solid rgba(100,100,100,0.6);
 
   box-shadow: 2px 2px 3px rgba(100,100,100,0.6);
   .show-img {
-    border-radius: 4px !important;
+    border-radius: 4px 4px 0 0!important;
   }
 
 }
 .product-description {
-  background: rgb(255,255,255);
+  background: rgb(100,100,100);
+  color: white;
   height: 100%;
   grid-row: 2 / span 1;
   grid-columns: 1 /span 1;
   margin-right: 20px;
   margin-bottom: 20px;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
 
   // border: 1px solid rgba(100,100,100,0.6);
   box-shadow: 2px 2px 3px rgba(100,100,100,0.6);
