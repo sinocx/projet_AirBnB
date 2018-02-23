@@ -8,6 +8,7 @@
   </ul>
 
   <!-- Tab panes -->
+
 <div class="wrap">
   <div class="container">
     <div class="tab-content">
@@ -25,6 +26,7 @@
               <div class="price">
                 <p><%= booking.product.price %>€/j </p>
               </div>
+
             </div>
             <div class="fin">
               <div class="date">
@@ -60,6 +62,7 @@
               <div class="price">
                 <p><%= booking.product.price %>€/j</p>
               </div>
+
             </div>
             <div class="fin2">
               <div class="date2">
@@ -72,6 +75,7 @@
               </div>
             </div>
           </div>
+
         <% end %>
       </div>
         <div role="tabpanel" class="tab-pane fade" id="messages">
@@ -89,6 +93,15 @@
               </div>
               <!-- <div class="price">
               </div> -->
+
+          <div class="fin2">
+            <div class="date2">
+              <p><%= booking.checkin %></p> 
+              <p><%= booking.checkout %></p>
+            </div>
+            <div class="status">
+              <p><%= booking.status %></p>
+              <p><%= link_to "Annuler", destroy_booking_path(booking), class: "btn-refuse" %></p>
             </div>
             <!-- <div class="fin2"> -->
               <!-- <div class="date2">

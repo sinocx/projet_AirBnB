@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def show
 
     @user = current_user
@@ -14,7 +15,12 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     authorize @user
     if @user.save
-     redirect_to products_path
+      if user.photo.present?
+       redirect_to products_path
+      else
+        @user.photo = Cloudinary::Uploader.upload('avatar.jpg')
+        @user.save
+      end
     else
       render :new
     end

@@ -15,15 +15,22 @@ class BookingsController < ApplicationController
     @booking.product = @product
      authorize @booking
     if @booking.save
-      redirect_to products_path
+      redirect_to dashboards_path
     else
       render :new
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+    redirect_to dashboards_path
+  end
+
 
   def validate
-    # get the booking
+    # get the bookingq
     @booking = Booking.find(params[:id])
     # update the status
     authorize @booking
