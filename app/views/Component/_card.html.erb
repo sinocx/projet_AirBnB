@@ -1,5 +1,5 @@
 <% @products.each do |product| %>
-  <div class="col-xs-6 pad">
+  <div class="col-xs-4 pad">
     <% if product.photo.present? %>
       <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
              url('<%= cl_image_path product.photo, height: 300, width: 300, :crop =>"scale" %>')">

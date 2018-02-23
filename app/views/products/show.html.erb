@@ -5,7 +5,7 @@
     </div>
     <div class="product">
       <div class="product-img">
-      <%= cl_image_tag @product.photo, height: 380, width: 480, crop: :scale, class: "show-img" %>
+      <%= cl_image_tag @product.photo, height: 400, width: 480, crop: :scale, class: "show-img" %>
       </div>
       <div class="product-map">
         <div
@@ -28,7 +28,7 @@
           <p><%= @product.description %></p>
         </div>
         <div class="reservation">
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+          <button type="button" class="search-button" data-toggle="modal" data-target="#exampleModalCenter">
             Reserver
           </button>
         </div>
