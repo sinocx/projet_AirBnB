@@ -2,8 +2,8 @@
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <h2>Date de votre réservation</h2>
      <%= simple_form_for [@product, @booking] do |f| %>
-       <%= f.input :checkin, as: :string, required: false, input_html: {class: "datepicker"} %>
-       <%= f.input :checkout, as: :string, required: false, input_html: {class: "datepicker"} %>
+       <%= f.input :checkin, :label => "Debut", as: :string, required: false, input_html: {class: "datepicker"} %>
+       <%= f.input :checkout, :label => "Fin", as: :string, required: false, input_html: {class: "datepicker"} %>
        <%= f.submit "Valider", class: "search-button" %>
      <% end %>
   </div>
