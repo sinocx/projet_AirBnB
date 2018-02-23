@@ -11,7 +11,7 @@
 
 }
 .wrappers {
-  background-image: image-url("wall-bike.jpg");
+  background-image: image-url("boissombre.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -21,7 +21,7 @@
 }
 .li{
   a {
-  color: black !important;
+  color: white !important;
   font-size: 20px;
   font-family: $body-font !important;
   letter-spacing: 1px;
@@ -95,3 +95,8 @@
   // border: 1px solid rgba(100,100,100,0.6);
   box-shadow: 2px 2px 3px rgba(100,100,100,0.6);
 }
+
+// .modal-open {
+//   background-color: #132b49 !important;
+//   overflow: hidden;
+// }
