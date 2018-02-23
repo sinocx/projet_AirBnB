@@ -1,20 +1,3 @@
-.btn-valide {
-  color: white;
-  background-color: blue;
-  font-size: 16px;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-.btn-refuse {
-  color: white;
-  background-color: red;
-  font-size: 16px;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-
 p {
   font-size: 15px;
 }
@@ -25,7 +8,8 @@ p {
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
   justify-content: space-between;
-  border: 1px solid black;
+  // border: 1px solid #F96D00;
+  border-bottom: 1px solid black;
 }
 
 .btn-deux {
@@ -76,6 +60,7 @@ p {
 }
 
 .photo {
+  border-radius: 21%;
   width: 140px;
 }
 
@@ -94,3 +79,40 @@ p {
   flex: 1 0 auto;
   margin-left: -37px;
 }
+
+
+.search-button {
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    background: #F96D00;
+    transition: background 0.3s ease;
+    text-decoration: none !important;
+    border: 0px;
+}
+
+.btn-black {
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    background: black;
+    transition: background 0.3s ease;
+    text-decoration: none !important;
+    border: 0px;
+}
+
+.nav {
+  font-size: 20px;
+  background-color: black;
+}
+
+.nav > li > a {
+  color: #F96D00;
+}
+
+.content-prod {
+  display: flex;
+  justify: space-between;
+  align-items: center;
+}
+
