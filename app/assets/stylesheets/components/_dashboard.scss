@@ -1,0 +1,138 @@
+
+p {
+  font-size: 15px;
+}
+.wrap {
+  // background-color: rgba(200,200,200,0.8);
+  background-image: url(boissombre.jpg);
+  background: cover;
+  height: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.content-resa {
+  display: flex;
+  background-color: white;
+  height: 200px;
+  padding: 20px;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow:3px 3px 3px rgba(100, 100, 100, 0.8);
+  // border-top: 1px solid rgba(100, 100, 100, 0.8);
+  // border-left: 1px solid rgba(100, 100, 100, 0.8);
+  margin-bottom: 15px;
+  // border: 1px solid #F96D00;
+  // border-bottom: 1px solid black;
+
+}
+
+.btn-deux {
+  padding: 10px;
+}
+.debut {
+  width: 70%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    width: 250px;
+
+
+  }
+
+  .adress {
+    padding: 0px;
+    flex: 1 0 auto;
+    margin-left: 10px;
+  }
+}
+
+
+.date {
+  padding: 0px 14px 38px;
+  text-align: center;
+}
+
+.date2 {
+  padding: 0px 28px;
+  text-align: center;
+}
+
+.status {
+  text-align: center;
+}
+
+.fin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fin2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  min-resolution: res;-width: 600px;
+}
+
+.photo {
+  border-radius: 3%;
+  width: 140px;
+}
+
+.name {
+  padding: 0px;
+  flex: 1 0 auto;
+  margin-left: -37px;
+}
+
+
+.search-button {
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    background: #F96D00;
+    transition: background 0.3s ease;
+    text-decoration: none !important;
+    border: 0px;
+}
+
+.btn-black {
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    background: black;
+    transition: background 0.3s ease;
+    text-decoration: none !important;
+    border: 0px;
+}
+
+.nav {
+  font-size: 20px;
+  color: #FCF9F9;
+}
+
+.nav > li > a {
+  color: #F96D00;
+  font-weight: bold;
+}
+
+.content-prod {
+  display: flex;
+  justify: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.tab-content {
+  min-height: calc(100vh - 100px)
+}
+
