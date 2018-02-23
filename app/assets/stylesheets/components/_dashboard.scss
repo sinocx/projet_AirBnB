@@ -1,14 +1,26 @@
 p {
   font-size: 15px;
 }
+.wrap {
+  // background-color: rgba(200,200,200,0.8);
+  background-image: url(boissombre.jpg);
+  background: cover;
+  height: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
 
 .content-resa {
   display: flex;
-  align-items: center;
+  background-color: white;
+  height: 200px;
   padding: 20px;
-  // border-bottom: 1px solid rgba(220,224,244,0.4);
-  box-shadow: 2px 2px 2px rgba(150,150,150,0.8);
+
+  // border-bottom: 1px solid  rgba(210,224,244,0.5);
   justify-content: space-between;
+  box-shadow:3px 3px 3px rgba(100, 100, 100, 0.8);
+  // border-top: 1px solid rgba(100, 100, 100, 0.8);
+  // border-left: 1px solid rgba(100, 100, 100, 0.8);
   margin-bottom: 15px;
   // border: 1px solid #F96D00;
   // border-bottom: 1px solid black;
@@ -40,10 +52,12 @@ p {
 
 .date {
   padding: 0px 10px;
+  text-align: center;
 }
 
 .date2 {
   padding: 0px 28px;
+  text-align: center;
 }
 
 .status {
@@ -66,18 +80,8 @@ p {
 }
 
 .photo {
-  border-radius: 21%;
+  border-radius: 3%;
   width: 140px;
-}
-
-
-.content-loca {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid rgba(220,224,244,0.4);
-  justify-content: space-between;
-  border: 1px solid black;
 }
 
 .name {
@@ -109,7 +113,7 @@ p {
 
 .nav {
   font-size: 20px;
-  background-color: black;
+  color: #FCF9F9;
 }
 
 .nav > li > a {
@@ -122,3 +126,6 @@ p {
   align-items: center;
 }
 
+.title {
+  font-weight: bold;
+}

@@ -8,10 +8,14 @@
 .container {
   margin-top: 0;
   margin-bottom:0;
+
 }
 .wrappers {
-  background: #F4F4F4;
+  background-image: image-url("wall-bike.jpg");
+  background-position: center;
+  background-size: cover;
 }
+
 .modal {
   padding-top: 125px
 }

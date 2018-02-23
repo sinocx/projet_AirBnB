@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div class="navbar_content">
     <div class="logo-navbar">
-      <%= link_to image_tag("ride-logo.jpg", alt: "logo"), '/', class: 'navbar-brand' %>
+      <%= link_to image_tag("logo-rid.png", alt: "logo"), '/', class: 'navbar-brand' %>
     </div>
     <div class="search-bar">
       <%= form_tag(products_path, method: :get) do %>
