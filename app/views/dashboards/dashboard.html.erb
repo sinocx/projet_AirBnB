@@ -15,7 +15,6 @@
 
 
   <!-- Tab panes -->
-
 <div class="wrap">
 
   <div class="container">
@@ -49,7 +48,6 @@
                 <p><%= booking.product.price %>€/j </p>
 
               </div>
-
             </div>
 
             <div class="fin">
@@ -76,7 +74,9 @@
 
                 <%= link_to "Refuser", refuse_booking_path(booking), class: "btn-black" %>
 
+
               <% end %>
+
 
               </div>
 
@@ -123,7 +123,6 @@
                 <p><%= booking.product.price %>€/j</p>
 
               </div>
-
             </div>
 
             <div class="fin2">
@@ -144,12 +143,12 @@
 
                 <p><%= link_to "Annuler", destroy_booking_path(booking), class: "btn-refuse" %></p>
 
+
               </div>
 
             </div>
 
           </div>
-
         <% end %>
 
       </div>
@@ -184,6 +183,10 @@
 
                 <%= link_to "Supprimer", product_path(product),method: :delete %>
 
+              </div>
+
+              <div class="delete-product">
+                <%= link_to "Supprimer", product_path(product),method: :delete %>
               </div>
 
             </div>
