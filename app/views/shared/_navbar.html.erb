@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
   <div class="navbar_content">
     <div class="logo-navbar">
       <%= link_to image_tag("ride-logo.jpg", alt: "logo"), '/', class: 'navbar-brand' %>
@@ -25,5 +26,16 @@
       </div>
     </div>
   </div>
-
-
+<% else %>
+    <div class="navbar_content">
+    <div class="logo-navbar">
+      <%= link_to image_tag("ride-logo.jpg", alt: "logo"), '/', class: 'navbar-brand' %>
+    </div>
+    <div class="search-bar">
+      <%= form_tag(products_path, method: :get) do %>
+      <%= text_field_tag :query, nil, placeholder: "Choisir une ville", class: 'btn-sea' %>
+      <%= submit_tag 'Recherche', class: "btn-recherche" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
