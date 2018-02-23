@@ -6,7 +6,7 @@ url('<%= image_path "banner-cop.jpg", crop: :fill; %>');">
 
     <div class="formulaire">
     <%= form_tag(products_path, method: :get) do %>
-      <%= text_field_tag :query, nil, placeholder: "Où te trouves tu ? ", class: "barre"%>
+      <%= text_field_tag :searchaddress, nil, placeholder: "Où te trouves tu ? ", class: "barre"%>
       <%= submit_tag 'Search', class: "search-button" %>
     <% end %>
     </div>
