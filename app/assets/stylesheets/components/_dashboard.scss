@@ -15,6 +15,7 @@ p {
   background-color: white;
   height: 200px;
   padding: 20px;
+
   // border-bottom: 1px solid  rgba(210,224,244,0.5);
   justify-content: space-between;
   box-shadow:3px 3px 3px rgba(100, 100, 100, 0.8);
@@ -23,6 +24,7 @@ p {
   margin-bottom: 15px;
   // border: 1px solid #F96D00;
   // border-bottom: 1px solid black;
+
 }
 
 .btn-deux {
@@ -35,10 +37,13 @@ p {
   justify-content: space-between;
   .title {
     width: 250px;
+
+
   }
 
   .adress {
     padding: 0px;
+    height: 100%;
     flex: 1 0 auto;
     margin-left: 10px;
   }
