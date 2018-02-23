@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.status = "Pending"
+    @booking.status = "En attente"
     @product = Product.find(params[:product_id])
     @booking.user = current_user
     @booking.product = @product
@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     # update the status
     authorize @booking
-    @booking.status = "Validate"
+    @booking.status = "Accepté"
     @booking.save
     # redirect to the dashboard
     redirect_to dashboards_path
@@ -36,7 +36,7 @@ class BookingsController < ApplicationController
   def refuse
     @booking = Booking.find(params[:id])
     authorize @booking
-    @booking.status = "Refuse"
+    @booking.status = "Refusé"
     @booking.save
     redirect_to dashboards_path
   end
