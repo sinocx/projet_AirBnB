@@ -3,9 +3,11 @@ class BookingPolicy < ApplicationPolicy
   def show?
     record.user == user
   end
+
   def new?
     true
   end
+
   def create?
     true
   end

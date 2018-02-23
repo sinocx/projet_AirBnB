@@ -1,7 +1,8 @@
 .content {
   display: flex;
   justify-content: space-between;
-
+  background-size: cover;
+  background-position: center;
 }
 #map {
   height: 100vh;
