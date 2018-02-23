@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   CATEGORY = [ "Skate", "Vélo", "Trottinette" ]
   mount_uploader :photo, PhotoUploader
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :title, presence: true
   validates :category, inclusion: { in: CATEGORY }, presence: true

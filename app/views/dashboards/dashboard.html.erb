@@ -34,13 +34,13 @@
               <p><%= booking.status %></p>
             <div class="btn-deux">
 
-              
+
               <% if booking.status == "Pending" %>
                 <%= link_to "Valider", validate_booking_path(booking), class: "btn-valide" %>
                 <%= link_to "Refuser", refuse_booking_path(booking), class: "btn-refuse" %>
               <% end %>
 
-                   
+
             </div>
             </div>
           </div>
@@ -91,6 +91,9 @@
             </div>
             <div class="price">
               <p><%= product.price %>€/j</p>
+            </div>
+            <div class="delete-product">
+              <%= link_to "Supprimer", product_path(product),method: :delete %>
             </div>
             <!-- <div class="price">
             </div> -->

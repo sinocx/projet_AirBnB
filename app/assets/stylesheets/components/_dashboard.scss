@@ -6,10 +6,13 @@ p {
   display: flex;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid rgba(220,224,244,0.4);
+  // border-bottom: 1px solid rgba(220,224,244,0.4);
+  box-shadow: 2px 2px 2px rgba(150,150,150,0.8);
   justify-content: space-between;
+  margin-bottom: 15px;
   // border: 1px solid #F96D00;
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
+
 }
 
 .btn-deux {
@@ -22,10 +25,13 @@ p {
   justify-content: space-between;
   .title {
     width: 250px;
+
+
   }
 
   .adress {
     padding: 0px;
+    height: 100%;
     flex: 1 0 auto;
     margin-left: 10px;
   }
