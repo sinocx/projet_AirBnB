@@ -25,12 +25,10 @@
              url('<%= cl_image_path 'zayrptmcw9ui3koordzp', height: 300, width: 400, crop: :fill %>')">
         <div class="card-category"><h2><%= product.category.capitalize %></h2></div>
           <div class="card-description">
-            <h2> <%= product.title %></h2>
+            <h2> <%= product.title.downcase.capitalize %></h2>
           </div>
           <div class="price-description">
-            <p> <%= product.price %> €</p>
-            <p><%= product.category %></p>
-            <p><%= product.address %></p>
+            <p> <%= product.price %> €/jour</p>
           </div>
 
         <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/davidcrn">
